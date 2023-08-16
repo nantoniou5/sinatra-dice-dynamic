@@ -50,5 +50,15 @@ get("/dice/5/4") do
     @rolls.push(die)
   end
 
-  erb(:five_four)
-end
+  erb(:fifty_six)
+  get("/dice/50/6") do
+    @rolls = []
+  
+    50.times do
+      die = rand(1..6)
+  
+      @rolls.push(die)
+    end
+  
+    erb(:fifty_six)
+  end
